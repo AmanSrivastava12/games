@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Xenzia</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../media/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../media/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../media/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../media/favicon/site.webmanifest" />
+  </head>
+  <body onload="initialize()">
+    <div class="backBtn" title="Go back">
+      <a href="../index.html">
+        <i class="fa-solid fa-xl fa-angles-left"></i>
+      </a>
+    </div>
+    <div class="innerbox">
+      <div class="levelbox">
+        <div class="heading1">
+          <h1 class="setgame">Game Settings</h1>
+        </div>
+        <div class="heading2">
+          <h3 class="difflvl">Select Difficulty Level</h3>
+        </div>
+        <div class="options">
+          <div class="op1">
+            <input type="radio" name="levels" id="eas" />
+            <label for="eas">Easy</label>
+          </div>
+          <div class="op2">
+            <input type="radio" name="levels" id="med" />
+            <label for="med">Medium</label>
+          </div>
+          <div class="op3">
+            <input type="radio" name="levels" id="har" />
+            <label for="har">Hard</label>
+          </div>
+        </div>
+        <div class="heading2">
+          <h3 class="diffgametype">Select Game Type</h3>
+        </div>
+        <div class="options">
+          <div class="op1">
+            <input type="radio" name="border" id="maze" />
+            <label for="maze">Maze</label>
+          </div>
+        </div>
+        <button class="okBtn" onclick="choiceDecider()">OK</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="score">
+        <div id="scorebox">Score : 0</div>
+        <div id="hiscorebox">High Score : 0</div>
+      </div>
+      <div id="board"></div>
+      <div
+        class="gamesettings"
+        title="Game Settings"
+        onclick="restartGame(true)"
+      >
+        <i class="fa-solid fa-xl fa-gear"></i>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+  <script
+    src="https://kit.fontawesome.com/c733fc0f10.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

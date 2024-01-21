@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Exo+2:wght@300&family=Merriweather&family=Permanent+Marker&family=Rowdies&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+.backBtn {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  cursor: pointer;
+}
+.backBtn a {
+  color: black;
+}
+.container {
+  background: url(../media/images/back.jpg);
+  height: 100vh;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+}
+#board {
+  background: linear-gradient(rgb(232, 255, 128), rgb(144, 252, 122));
+  border: 5px solid rgb(128, 131, 0);
+  width: 75vmin;
+  height: 75vmin;
+  margin-left: 10vw;
+  margin-top: 3vw;
+  display: grid;
+  grid-template-rows: repeat(40, 1fr);
+  grid-template-columns: repeat(40, 1fr);
+}
+.score {
+  display: flex;
+  font-family: "Permanent Marker", cursive;
+  font-weight: bolder;
+  font-size: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 10vw;
+  width: 76vmin;
+  justify-content: space-around;
+}
+#scorebox {
+  padding-bottom: 10px;
+}
+#hiscorebox {
+  padding-bottom: 10px;
+}
+.snakebody,
+.head {
+  background: linear-gradient(rgb(175, 175, 75), rgb(175, 175, 100));
+  border: 0.25vmin solid rgb(0, 0, 0);
+  border-radius: 4px;
+}
+.food {
+  background: linear-gradient(rgb(100, 100, 75), rgb(100, 100, 100));
+  border: 0.25vmin solid black;
+  border-radius: 5px;
+}
+.gamesettings {
+  padding: 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+.innerbox {
+  display: none;
+  background-color: rgba(22, 161, 0, 0.6);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.levelbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(208, 250, 124);
+  border: 2px solid rgb(22, 161, 0);
+  border-radius: 10px;
+  font-weight: bold;
+  width: 30vw;
+  padding: 25px;
+  margin: 9% auto;
+}
+.heading1,
+.heading2 {
+  font-family: "Merriweather";
+  margin-top: 20px;
+}
+.options {
+  font-family: "Exo 2";
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 25px 0;
+}
+input[type="radio"]:checked:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 15px;
+  top: -1px;
+  left: -1px;
+  position: relative;
+  background-color: rgb(22, 161, 0);
+  content: "";
+  display: inline-block;
+  border: 2px solid black;
+}
+.okBtn {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+.okBtn:hover {
+  background-color: rgb(22, 161, 0);
+}
+
+/* responsive */
+@media screen and (max-width: 1200px) {
+  #board {
+    margin-top: 10vw;
+  }
+  .levelbox {
+    width: 50vw;
+  }
+}
+@media screen and (max-width: 940px) {
+  #board {
+    margin: auto;
+    width: 80vmin;
+    height: 80vmin;
+  }
+  .levelbox {
+    width: 60vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  #board {
+    width: 90vmin;
+    height: 90vmin;
+  }
+  .score {
+    flex-direction: column;
+  }
+  .levelbox {
+    width: 80vw;
+    margin: 20% auto;
+  }
+}
